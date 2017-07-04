@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 a = [9,8,7,6,5,4,3,2,1,0]
 b = [19,18,17,61,110,14,13,21,11,10]
-
+c = [3,2,1]
 
 def StupidSort(a):
     k = 0
@@ -84,26 +84,23 @@ def MergeSort(a):
 
 
 def SelectionSort(a):
-    k = 0
-    m = 0
+   for k in range(len(a)-1):
+    m = k 
     i = k + 1
     while i < len(a):
-        if a[i] < a[m]:
-           m = i
-        i += 1
-    #t = a[k]
-    #a[k] = a[m]
-    #a[m] = t
+       if a[i] < a[m]:
+          m = i
+       i += 1  
     a[k],a[m] = a[m],a[k]
-    return a
+   return a
 
 def listmerge(a,b):     
     for l in b:
         a.append(l)
     return a
 
-a.extend(b)
-print(a)
+#a.extend(b)
+#print(a)
 
 print("BubbleSort:"+str(BubbleSort(a)))
 print("ShakerSort:"+str(ShakerSort(a)))
